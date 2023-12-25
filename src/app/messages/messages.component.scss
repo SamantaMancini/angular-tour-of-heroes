@@ -1,19 +1,27 @@
-/* MessagesComponent's private CSS styles */
+$messageColor: #A80000;
+$clearColor: #333;
+$clearBackgroundColor: #eee;
+$clearHoverColor: white;
+$clearHoverColorBackground: #42545C;
+
 h2 {
-  color: #A80000;
-  font-family: Arial, Helvetica, sans-serif;
+  color: $messageColor;
   font-weight: lighter;
+
 }
 
 .clear {
-  color: #333;
-  background-color: #eee;
+  color: $clearColor;
+  background-color: $clearBackgroundColor;
   margin-bottom: 12px;
   padding: 1rem;
   border-radius: 4px;
   font-size: 1rem;
 }
-.clear:hover {
-  color: white;
-  background-color: #42545C;
-}
+
+
+  .clear:hover {
+    color: $clearHoverColor;
+    background-color: $clearHoverColorBackground;
+  }
+

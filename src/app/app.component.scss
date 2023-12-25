@@ -1,21 +1,34 @@
-/* AppComponent's private CSS styles */
+$titleColor: #369;
+$fontSize: 250%;
+$linkBackground: #e8e8e8;
+$linkColor: #3d3d3d;
+$hoverColor: white;
+$hoverBackgroundColor: #42545C;
+$activeColor: black;
+
 h1 {
   margin-bottom: 0;
-}
-nav a {
-  padding: 1rem;
-  text-decoration: none;
-  margin-top: 10px;
-  display: inline-block;
-  background-color: #e8e8e8;
-  color: #3d3d3d;
-  border-radius: 4px;
+  color: $titleColor;
+  font-size: $fontSize;
 }
 
-nav a:hover {
-  color: white;
-  background-color: #42545C;
-}
-nav a:active {
-  background-color: black;
+nav {
+  a {
+    padding: 1rem;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: $linkBackground;
+    color: $linkColor;
+    border-radius: 4px;
+
+    &:hover {
+      color: white;
+      background-color: $hoverBackgroundColor;
+    }
+
+    &:active {
+      background-color: $activeColor;
+    }
+  }
 }
