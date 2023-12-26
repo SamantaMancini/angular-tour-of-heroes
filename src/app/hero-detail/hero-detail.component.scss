@@ -1,25 +1,43 @@
-/* HeroDetailComponent's private CSS styles */
+$labelColor: #435960;
+$labelFontWeight: bold;
+$inputFontSize: 1em;
+$inputPadding: .5rem;
+$buttonMarginTop: 20px;
+$buttonMarginRight: .5rem;
+$buttonBackgroundColor: #eee;
+$buttonPadding: 1rem;
+$buttonBorderRadius: 4px;
+$buttonFontSize: 1rem;
+$buttonHoverBackgroundColor: #cfd8dc;
+$buttonDisabledBackgroundColor: #eee;
+$buttonDisabledColor: #ccc;
+$buttonDisabledCursor: auto;
+
 label {
-  color: #435960;
-  font-weight: bold;
+  color: $labelColor;
+  font-weight: $labelFontWeight;
 }
+
 input {
-  font-size: 1em;
-  padding: .5rem;
+  font-size: $inputFontSize;
+  padding: $inputPadding;
 }
+
 button {
-  margin-top: 20px;
-  margin-right: .5rem;
-  background-color: #eee;
-  padding: 1rem;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-button:hover {
-  background-color: #cfd8dc;
-}
-button:disabled {
-  background-color: #eee;
-  color: #ccc;
-  cursor: auto;
+  margin-top: $buttonMarginTop;
+  margin-right: $buttonMarginRight;
+  background-color: $buttonBackgroundColor;
+  padding: $buttonPadding;
+  border-radius: $buttonBorderRadius;
+  font-size: $buttonFontSize;
+
+  &:hover {
+    background-color: $buttonHoverBackgroundColor;
+  }
+
+  &:disabled {
+    background-color: $buttonDisabledBackgroundColor;
+    color: $buttonDisabledColor;
+    cursor: $buttonDisabledCursor;
+  }
 }

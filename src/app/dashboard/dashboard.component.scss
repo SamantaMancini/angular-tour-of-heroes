@@ -1,4 +1,10 @@
-/* DashboardComponent's private CSS styles */
+$primaryColor: #3f525c;
+$secondaryColor: #fff;
+$hoverColor: black;
+$maxWidth: 1000px;
+$fontSize: 1.2rem;
+$minWidth: 70px;
+$margin: .5rem;
 
 h2 {
   text-align: center;
@@ -7,7 +13,7 @@ h2 {
 .heroes-menu {
   padding: 0;
   margin: auto;
-  max-width: 1000px;
+  max-width: $maxWidth;
 
   /* flexbox */
   display: -webkit-box;
@@ -23,23 +29,27 @@ h2 {
 }
 
 a {
-  background-color: #3f525c;
+  background-color: $primaryColor;
   border-radius: 2px;
   padding: 1rem;
-  font-size: 1.2rem;
+  font-size: $fontSize;
   text-decoration: none;
   display: inline-block;
-  color: #fff;
+  color: $secondaryColor;
   text-align: center;
   width: 100%;
-  min-width: 70px;
-  margin: .5rem auto;
+  min-width: $minWidth;
+  margin: $margin auto;
   box-sizing: border-box;
 
   /* flexbox */
   order: 0;
   flex: 0 1 auto;
   align-self: auto;
+
+  a:hover {
+    background-color: $hoverColor;
+  }
 }
 
 @media (min-width: 600px) {
@@ -47,8 +57,4 @@ a {
     width: 18%;
     box-sizing: content-box;
   }
-}
-
-a:hover {
-  background-color: black;
 }

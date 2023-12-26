@@ -1,47 +1,71 @@
-/* HeroSearch private styles */
+$labelDisplay: block;
+$labelFontWeight: bold;
+$labelFontSize: 1.2rem;
+$labelMarginTop: 1rem;
+$labelMarginBottom: .5rem;
+$inputPadding: .5rem;
+$inputWidth: 100%;
+$inputMaxWidth: 600px;
+$inputBoxSizing: border-box;
+$inputDisplay: block;
+$inputFocusOutline: #336699 auto 1px;
+$listStyleType: none;
+$searchResultLinkBorder: 1px solid gray;
+$searchResultLinkDisplay: inline-block;
+$searchResultLinkWidth: 100%;
+$searchResultLinkMaxWidth: 600px;
+$searchResultLinkPadding: .5rem;
+$searchResultLinkBoxSizing: border-box;
+$searchResultLinkTextDecoration: none;
+$searchResultLinkColor: black;
+$searchResultLinkHoverBackgroundColor: #435A60;
+$searchResultLinkHoverColor: white;
+$searchResultMarginTop: 0;
+$searchResultPaddingLeft: 0;
 
 label {
-  display: block;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  margin-bottom: .5rem;
-
+  display: $labelDisplay;
+  font-weight: $labelFontWeight;
+  font-size: $labelFontSize;
+  margin-top: $labelMarginTop;
+  margin-bottom: $labelMarginBottom;
 }
+
 input {
-  padding: .5rem;
-  width: 100%;
-  max-width: 600px;
-  box-sizing: border-box;
-  display: block;
-}
+  padding: $inputPadding;
+  width: $inputWidth;
+  max-width: $inputMaxWidth;
+  box-sizing: $inputBoxSizing;
+  display: $inputDisplay;
 
-input:focus {
-  outline: #336699 auto 1px;
+  &:focus {
+    outline: $inputFocusOutline;
+  }
 }
 
 li {
-  list-style-type: none;
-}
-.search-result li a {
-  border-bottom: 1px solid gray;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
-  display: inline-block;
-  width: 100%;
-  max-width: 600px;
-  padding: .5rem;
-  box-sizing: border-box;
-  text-decoration: none;
-  color: black;
+  list-style-type: $listStyleType;
 }
 
-.search-result li a:hover {
-  background-color: #435A60;
-  color: white;
+.search-result li a {
+  border-bottom: $searchResultLinkBorder;
+  border-left: $searchResultLinkBorder;
+  border-right: $searchResultLinkBorder;
+  display: $searchResultLinkDisplay;
+  width: $searchResultLinkWidth;
+  max-width: $searchResultLinkMaxWidth;
+  padding: $searchResultLinkPadding;
+  box-sizing: $searchResultLinkBoxSizing;
+  text-decoration: $searchResultLinkTextDecoration;
+  color: $searchResultLinkColor;
+
+  &:hover {
+    background-color: $searchResultLinkHoverBackgroundColor;
+    color: $searchResultLinkHoverColor;
+  }
 }
 
 ul.search-result {
-  margin-top: 0;
-  padding-left: 0;
+  margin-top: $searchResultMarginTop;
+  padding-left: $searchResultPaddingLeft;
 }
